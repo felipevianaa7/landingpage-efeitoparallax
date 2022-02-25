@@ -7,7 +7,7 @@
 - JS
 
 ## <p>Layout do Site</p>
-<a href="https://felipevianaa7.github.io/coresdinamicas/">Acesse aqui</a>
+<a href="https://felipevianaa7.github.io/landingpage-efeitoparallax/">Acesse aqui</a>
 
 ## <p style="width: 600px; height: 1200px; padding-top: 30px;">
 
