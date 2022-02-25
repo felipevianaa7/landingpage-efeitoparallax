@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /*Faz o rolamento com  um breve movimento*/
+}
+
+body {
+    background: linear-gradient(#2b1055, #7597de);
+    min-height: 100vh; /*Prenche toda a tela com o gradient*/
+    overflow-x: hidden; /*Corta o pedaço que mostra da cor do fundo no rolamento*/   
+}
+
+header {
+    position: absolute; /*Fica sobre todos os elementos*/
+    top: 0; /*Sem espaçamento no topo*/
+    left: 0; /*sem espaçamento pra esquerda*/
+    width: 100%; /*largura total*/
+    padding: 30px 100px; /*Superior, direita*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*Testar sem no final*/
+    z-index: 10000; /*Ordem de pilha do cabeçalho*/
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 8px; /*espaço entre as letras da LOGO*/
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none; /*Retira o marcador de item de lista*/
+    margin-left: 20px; /*o MENU vai um pouco para o lado esquerdo*/
+}
+
+header ul li a {
+    text-decoration: none; /*Retirar o sublinhado*/
+    padding: 6px 15px; /*Tamanho da cor de fundo dos itens*/
+    color: #fff;
+    border-radius: 15px;
+}
+
+header ul li a:hover , header ul li a.fixado { 
+    background: #fff;
+    color: #2b1055;
+}
+
+/*CONTEUDO*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /*Altera sua posição baseada na sua altura inicial*/
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    overflow: hidden;
+    
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute; /*Ignora a posição de todos os elementos*/
+    top: 0;
+    left: 0;
+    width: 100%; /*Largura total*/
+    height: 100%; /*Altura total*/
+    object-fit: cover; /*Como os elementos devem ficar de acordo com a altura e largura usados*/
+    pointer-events: none; /*Muda o cursor do "botão Explore"*/
+}
+
+section img#moon {
+    mix-blend-mode: screen; /*Mescar as cores do elemento com o background*/
+
+}
+
+section img#mountains_front {
+    z-index: 10;
+
+}
+
+#texto {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;    
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px); /*Reposiciona um elemento na direção horizontal
+    ou vertical (horizontal = x/ vertical = y*/
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2 {
+    font-size:3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1em;    
+    color: #fff;
+}
